@@ -1,0 +1,319 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Theme */
+:root {
+  /* BACKGROUND */
+  --primary-gradient-bg: linear-gradient(
+    135deg,
+    hsl(217 91% 60% / 0.13),
+    hsl(222 47% 11% / 0.05)
+  );
+  --secondary-gradient-bg: linear-gradient(
+    135deg,
+    hsla(217, 97%, 31%, 0.1),
+    hsla(220, 43%, 3%, 0.05)
+  );
+  --plain-white-bg: hsl(0, 0%, 100%);
+
+  /* TEXT */
+  --underline: linear-gradient(135deg, hsl(222 47% 11%), hsl(217 91% 60%));
+  --accent-text: linear-gradient(135deg, hsl(222 47% 11%), hsl(217 91% 60%));
+  --primary-text: hsl(222, 46%, 11%);
+  --secondary-text: hsl(215, 17%, 40%);
+  --paragraph-text: hsl(215 16% 47%);
+
+  /* NAV */
+  --scrolled-nav-bg: linear-gradient(
+    135deg,
+    hsla(217, 91%, 60%, 0),
+    hsla(222, 92%, 46%, 0)
+  );
+  --harmbuger-bg: hsl(222, 46%, 11%);
+  --opened-harmbuger-bg: linear-gradient(
+    180deg,
+    hsl(0 0% 100%),
+    hsl(220 13% 96%)
+  );
+  --hamburger-links-text: hsl(222, 46%, 11%);
+  --opened-harmbuger-bs: 0 0 5px hsl(222, 46%, 11%);
+  --dark-mode-toggle: hsl(222, 46%, 11%);
+  --dark-mode-toggle-border: 1px solid hsla(222, 46%, 11%, 0.147);
+
+  /* HERO */
+  --hi-text: hsl(120, 46%, 11%);
+  --hero-btn1-bg: hsl(222, 46%, 11%);
+  --hero-btn1-border: 2px solid hsl(222, 46%, 11%);
+  --hero-btn1-text: hsl(0, 0%, 100%);
+  --hero-btn1-hover-bg: linear-gradient(
+    135deg,
+    hsl(217, 60%, 40%),
+    hsl(217, 60%, 40%)
+  );
+  --hero-btn1-hover-text: hsl(222, 46%, 11%);
+  --hero-btn1-hover-border: 2px solid hsl(222, 46%, 11%);
+  --hero-btn2-bg: inherit;
+  --hero-btn2-border: 2px solid hsl(222, 46%, 11%);
+  --hero-btn2-text: hsl(222, 46%, 11%);
+  --hero-btn2-hover-bg: linear-gradient(
+    135deg,
+    hsl(217, 60%, 40%),
+    hsl(217, 60%, 40%)
+  );
+  --hero-btn2-hover-text: hsl(222, 46%, 11%);
+  --hero-btn2-hover-border: 2px solid hsl(217, 60%, 40%);
+  --hero-socials: hsl(222, 46%, 11%);
+  --hero-socials-hover: hsl(217, 60%, 40%);
+
+  /* SKILLS */
+  --github-icon-color: #000;
+  --python-icon-color: #3776ab;
+  --skill-card-bg: linear-gradient(
+    135deg,
+    hsl(217 91% 60% / 0.1),
+    hsla(222, 46%, 11%, 0.1)
+  );
+  --skills-name: hsl(222, 46%, 11%);
+  --skill-card-hover-bs: 0 8px 20px hsla(0, 0%, 0%, 0.4);
+
+  /* PROJECTS */
+  --project-card-bg: hsl(0, 0%, 100%);
+  --project-title: hsl(222, 46%, 11%);
+  --paragraph-text2: hsla(222, 46%, 11%, 0.851);
+  --project-description: hsl(222, 46%, 11%);
+  --project-links-text: hsl(222, 46%, 25%);
+  --project-links-hover: hsl(222, 45%, 41%);
+  --project-card-hover-bs: 0 8px 24px hsl(222 47% 11% / 0.15);
+  --project-card-border: 1px solid hsla(229, 96%, 30%, 0.278);
+  --project-card-bs: 0 8px 20px hsla(229, 84%, 5%, 0.363);
+
+  /* ABOUT */
+  --about-containers-bg: hsl(0, 0%, 100%);
+  --about-btn-bg: hsl(222, 46%, 11%);
+  --about-btn-text: hsl(0, 0%, 100%);
+  --about-btn-hover-bg: hsl(215, 16%, 47%);
+  --about-btn-hover-text: hsl(222, 46%, 11%);
+  --about-btn-bs: 0px 3px 8px hsla(211, 100%, 50%, 0.3);
+
+  /* CONTACT */
+  --contact-icons: hsl(222, 46%, 11%);
+  --contact-icons-bg: hsl(210, 40%, 96%);
+  --contact-address-muted: hsl(215, 19%, 35%);
+  --contact-contacts: hsl(200, 92%, 47%);
+  --contact-form-bg: hsl(0, 0%, 100%);
+  --contact-form-border: 1px solid hsla(229, 97%, 48%, 0.283);
+  --contact-form-bs: 0 8px 20px hsla(229, 84%, 5%, 0.08);
+  --contact-form-focus-bs: 0 0 0 2px hsla(221, 90%, 34%, 0.097);
+  --contact-form-focus-bc: hsla(221, 100%, 50%), 0.097;
+  --contact-btn-bg: hsl(222, 46%, 11%);
+  --contact-btn-text: hsl(0, 0%, 100%);
+
+  /* FOOTER */
+  --footer-bg: hsl(222, 46%, 11%);
+  --footer-headings: hsl(210, 40%, 98%);
+  --footer-text: hsl(214, 32%, 91%);
+  --footer-btn-bg: hsl(0, 0%, 100%);
+  --footer-btn-text: hsl(222, 46%, 11%);
+  --footer-btn-hover-bs: 0 4px 100px hsl(215 16% 47%);
+  --footer-divider: hsla(0, 0%, 100%, 0.141);
+}
+
+body.dark-mode {
+  /* BACKGROUND */
+  /* --primary-gradient-bg: linear-gradient(
+    135deg,
+    hsl(217, 94%, 14%),
+    hsl(220, 46%, 5%)
+  );
+  --secondary-gradient-bg: linear-gradient(
+    135deg,
+    hsla(217, 94%, 14%, 1),
+    hsla(220, 46%, 5%, 1)
+  ); */
+
+  --secondary-gradient-bg: linear-gradient(
+    135deg,
+    hsl(217, 94%, 14%),
+    hsl(220, 46%, 5%)
+  );
+  --primary-gradient-bg: linear-gradient(
+    135deg,
+    hsla(217, 94%, 14%, 1),
+    hsla(220, 46%, 5%, 1)
+  );
+  --plain-black-bg: hsl(0, 0%, 0%);
+
+  /* TEXT */
+  --underline: linear-gradient(135deg, hsl(222, 75%, 63%), hsl(217 91% 60%));
+  --accent-text: linear-gradient(120deg, hsl(214, 32%, 91%), hsl(217 91% 60%));
+  --primary-text: hsl(214, 32%, 91%);
+  --secondary-text: hsla(214, 30%, 91%, 0.9);
+  --paragraph-text: hsl(214, 32%, 91%, 0.8);
+
+  /* NAV */
+  --scrolled-nav-bg: linear-gradient(
+    135deg,
+    hsla(217, 91%, 60%, 0),
+    hsla(222, 92%, 46%, 0)
+  );
+  --harmbuger-bg: hsl(214, 32%, 91%);
+  --opened-harmbuger-bg: linear-gradient(
+    180deg,
+    hsl(222, 46%, 11%),
+    hsl(222, 57%, 13%)
+  );
+  --hamburger-links-text: hsl(214, 32%, 91%);
+  --opened-harmbuger-bs: 0 0 5px hsl(222, 44%, 38%);
+  --dark-mode-toggle: hsl(214, 32%, 91%);
+  --dark-mode-toggle-border: 1px solid hsla(217, 91%, 60%, 0.155);
+
+  /* HERO */
+  --hi-text: hsl(0, 0%, 100%);
+  --hero-btn1-bg: linear-gradient(
+    135deg,
+    hsl(214, 32%, 91%),
+    hsl(214, 32%, 91%)
+  );
+  --hero-btn1-border: 2px solid hsl(214, 32%, 91%);
+  --hero-btn1-text: hsl(222, 46%, 11%);
+  --hero-btn1-hover-bg: linear-gradient(
+    135deg,
+    hsl(217, 60%, 40%),
+    hsl(217, 60%, 40%)
+  );
+  --hero-btn1-hover-text: hsl(222, 46%, 11%);
+  --hero-btn1-hover-border: 2px solid hsl(214, 32%, 91%);
+  --hero-btn2-bg: inherit;
+  --hero-btn2-border: 2px solid hsl(214, 32%, 91%);
+  --hero-btn2-text: hsl(214, 32%, 91%);
+  --hero-btn2-hover-bg: linear-gradient(
+    135deg,
+    hsl(217, 60%, 40%),
+    hsl(217, 60%, 40%)
+  );
+  --hero-btn2-hover-text: hsl(214, 32%, 91%);
+  --hero-btn2-hover-border: 2px solid hsl(217, 60%, 40%);
+
+  --hero-socials: hsl(214, 32%, 91%);
+  --hero-socials-hover: hsl(217, 60%, 40%);
+
+  /* SKILLS */
+  --github-icon-color: #fff;
+  --python-icon-color: #deab11ff;
+  --skill-card-bg: linear-gradient(
+    135deg,
+    hsl(217 91% 60% / 0.3),
+    hsla(222, 46%, 11%, 0.3)
+  );
+  --skills-name: hsl(214, 32%, 91%);
+  --skill-card-hover-bs: 0 8px 20px hsla(214, 30%, 91%, 0.082);
+
+  /* PROJECTS */
+  --project-card-bg: hsla(220, 46%, 5%, 0.281);
+  --project-title: hsl(214, 32%, 91%);
+  --paragraph-text2: hsla(214, 32%, 91%, 0.851);
+  --project-links-text: hsl(222, 55%, 88%);
+  --project-links-hover: hsl(217, 60%, 40%);
+  --project-card-hover-bs: 0 8px 24px hsla(214, 30%, 91%, 0.082);
+  --project-card-border: 1px solid hsla(220, 100%, 80%, 0.281);
+  --project-card-bs: 0 8px 20px hsla(214, 30%, 91%, 0.082);
+
+  /* ABOUT */
+  --about-containers-bg: hsla(220, 46%, 5%, 0.281);
+  --about-btn-bg: hsl(214, 32%, 91%);
+  --about-btn-text: hsl(222, 46%, 11%);
+  --about-btn-hover-bg: hsl(217, 60%, 40%);
+  --about-btn-hover-text: hsl(222, 46%, 11%);
+  --about-btn-bs: 0px 3px 8px hsla(211, 100%, 50%, 0.3);
+
+  /* CONTACT */
+  --contact-icons: hsl(214, 32%, 91%);
+  --contact-icons-bg: none;
+  --contact-address-muted: hsla(214, 32%, 91%, 0.851);
+  --contact-contacts: hsl(200, 92%, 47%);
+
+  --contact-form-bg: hsla(220, 46%, 5%, 0.281);
+  --contact-form-border: 1px solid hsla(220, 100%, 80%, 0.281);
+  --contact-form-bs: 0 8px 20px hsla(214, 30%, 91%, 0.082);
+  --contact-form-focus-bs: 0 0 0 2px hsla(221, 90%, 34%, 0.097);
+  --contact-form-focus-bc: hsla(221, 100%, 50%), 0.097;
+  --contact-btn-bg: hsl(214, 32%, 91%);
+  --contact-btn-text: hsl(222, 46%, 11%);
+
+  /* FOOTER */
+  --footer-bg: hsl(220, 93%, 6%);
+  --footer-headings: hsl(210, 40%, 98%);
+  --footer-text: hsl(214, 32%, 91%);
+  --footer-btn-bg: hsl(0, 0%, 100%);
+  --footer-btn-text: hsl(222, 46%, 11%);
+  --footer-btn-hover-bs: 0 4px 100px hsl(215 16% 47%);
+  --footer-divider: hsla(0, 0%, 100%, 0.141);
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Inter,
+    Arial,
+    sans-serif;
+  /* background: var(--secondary-gradient-bg), var(--primary-gradient-bg); */
+  color: var(--text);
+  line-height: 1.6;
+  transition:
+    background 2s ease,
+    background-color 2s ease,
+    color 0.5s ease;
+}
+
+* {
+  transition:
+    background 2s ease,
+    background-color 2s ease,
+    color 0.5s ease,
+    border 1s ease;
+}
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,386 @@
+.skills {
+  padding: 4rem 14rem;
+  background: var(--secondary-gradient-bg);
+  color: var(--primary-text);
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.2rem;
+  margin-bottom: 3.5rem;
+  color: var(--primary-text);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 4rem 8rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--skills-name);
+}
+
+.skill-card {
+  height: 14rem;
+  width: 13rem;
+  background: var(--skill-card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--skill-card-hover-bs);
+}
+
+.skill-icon {
+  font-size: 6rem;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+  transition:
+    transform 0.4s ease,
+    filter 0.3s ease;
+}
+
+/* Hover animations */
+.skill-card:hover .skill-icon {
+  filter: brightness(1.2);
+}
+
+/* RESPONSIVE */
+
+/* @media (max-width: 367px) {
+  .skills {
+    padding: 10rem 10rem;
+  }
+} */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .skills {
+    padding: 4rem 2rem;
+  }
+
+  .skill-icon {
+    font-size: 4rem;
+    margin-bottom: 0.6rem;
+    display: inline-block;
+    transition:
+      transform 0.4s ease,
+      filter 0.3s ease;
+  }
+
+  .skill-card {
+    height: auto;
+    width: auto;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet */
+@media (max-width: 365px) {
+  .skills {
+    padding: 4rem 2rem;
+  }
+
+  .skills-title {
+    text-wrap: nowrap;
+  }
+
+  .skills-grid {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: x; */
+  }
+  .skill-card {
+    height: 100%;
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .skill-name {
+    margin: 0;
+  }
+
+  .skill-icon {
+    margin-bottom: -3rem;
+    margin-top: -1rem;
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 240px) {
+  .skills-title {
+    text-wrap: wrap;
+  }
+  .skill-icon {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .skills {
+    padding: 4rem 2rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .skill-card {
+    height: 12rem;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .skill-icon {
+    font-size: 4rem;
+  }
+}
+
+/* Large Desktop */
+@media (max-width: 1372px) and (min-width: 1025px) {
+  .skills {
+    padding: 4rem 2rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .skill-card {
+    height: 12rem;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .skill-icon {
+    font-size: 4rem;
+  }
+}
+
+/* SPECIAL EFFECTS PER ICON */
+
+/* HTML */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.skill-card:hover .fa-html5 {
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+/* CSS */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+.skill-card:hover .fa-css3-alt {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+/* JavaScript */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.skill-card:hover .fa-js {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Java */
+@keyframes steam {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+}
+.skill-card:hover .fa-java {
+  animation: steam 1.2s ease-in-out infinite;
+}
+
+/* MySQL */
+@keyframes swim {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(6px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(-5deg);
+  }
+}
+.skill-card:hover .si-mysql {
+  animation: swim 1.5s ease-in-out infinite;
+}
+
+/* React */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.skill-card:hover .fa-react {
+  animation: spin 4s linear infinite;
+}
+
+/* Git */
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+.skill-card:hover .fa-git-alt {
+  animation: swing 1s ease-in-out infinite;
+}
+
+/* GitHub */
+.fa-github {
+  color: var(--github-icon-color);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.skill-card:hover .fa-github {
+  animation: blink 1s linear infinite;
+}
+
+/* Figma */
+@keyframes slide {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+.skill-card:hover .si-figma {
+  animation: slide 1s ease-in-out infinite;
+}
+
+/* Linux */
+@keyframes hop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.skill-card:hover .fa-linux {
+  animation: hop 0.8s ease-in-out infinite;
+}
+
+/* Python */
+.fa-python {
+  color: var(--python-icon-color);
+}
+@keyframes slither {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(4px) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-4px) rotate(-2deg);
+  }
+}
+.skill-card:hover .fa-python {
+  animation: slither 1.2s ease-in-out infinite;
+}
+
+/* Tailwind CSS */
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(-6px) scaleY(1.05);
+  }
+}
+.skill-card:hover .si-tailwindcss {
+  animation: wave 0.9s ease-in-out infinite;
+}
