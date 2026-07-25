@@ -1,12 +1,88 @@
-# React + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Designing intuitive interfaces. Building modern web experiences. Continuously learning.
 
-Currently, two official plugins are available:
+A modern, responsive portfolio website built to showcase my projects, skills, and experience as a Frontend Developer. The site is powered by **Sanity CMS**, making it easy to manage content dynamically while providing a fast and engaging user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Responsive design for desktop, tablet, and mobile
+- Dynamic project management with Sanity CMS
+- Interactive project detail modals
+- Resume viewing and downloading
+- Contact section
+- Smooth scrolling navigation
+- Clean and modern UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Sanity CMS
+
+## Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/yusjeng21/Personal-Portfolio
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+├── styles/
+├── lib/
+├── index.css
+├── App.jsx
+└── main.jsx
+```
+
+## What I Learned
+
+This project strengthened my understanding of React component architecture, responsive design, and integrating a headless CMS into a frontend application. It also provided hands-on experience with GROQ queries, dynamic content management, and deploying production-ready React applications.
+
+## Future Improvements
+
+- Add project search and filtering
+- Blog section powered by Sanity
+- Animations and page transitions
+- Project gallery with multiple screenshots
+- Upcoming projects section
+- Multi-language Support
+
+## Connect With Me
+
+If you'd like to collaborate, discuss opportunities, or simply connect, feel free to reach out through my portfolio or social media profiles.
+
+---
+
+If you like this project, consider giving it a star!
+
+## Related Project
+
+CMS Repository:
+https://github.com/yusjeng21/personal-portfolio-cms
