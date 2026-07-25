@@ -61,6 +61,10 @@ src/
 └── main.jsx
 ```
 
+## Screenshot
+
+<img width="1920" height="5825" alt="Yusupha-Jeng-Portfolio" src="https://github.com/user-attachments/assets/4179551f-c12e-48e5-8a6c-d72ecfc7bf8d" />
+
 ## What I Learned
 
 This project strengthened my understanding of React component architecture, responsive design, and integrating a headless CMS into a frontend application. It also provided hands-on experience with GROQ queries, dynamic content management, and deploying production-ready React applications.
